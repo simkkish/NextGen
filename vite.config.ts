@@ -7,5 +7,5 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
-  base: '/NextGen/', // Updated to match repository name
+  base: './', // Updated to match repository name
 });
