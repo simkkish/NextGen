@@ -1,13 +1,10 @@
-import React from 'react';
 import {
   Code2,
   Cloud,
   Shield,
   GitBranch,
   Brain,
-  Github,
   Linkedin,
-  Twitter,
   Mail,
   ArrowRight
 } from 'lucide-react';
@@ -290,9 +287,7 @@ function App() {
           <div className="max-w-2xl mx-auto">
             <ContactForm />
             <div className="mt-12 flex justify-center space-x-6">
-              <SocialLink icon={<Github />} href="#" />
               <SocialLink icon={<Linkedin />} href="#" />
-              <SocialLink icon={<Twitter />} href="#" />
               <SocialLink icon={<Mail />} href="mailto:contact@nexgendevops.com" />
             </div>
           </div>
