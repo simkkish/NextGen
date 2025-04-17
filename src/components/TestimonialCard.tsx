@@ -4,24 +4,29 @@ interface TestimonialCardProps {
   name: string;
   role: string;
   content: string;
-  image: string;
 }
 
-export function TestimonialCard({ name, role, content, image }: TestimonialCardProps) {
+export function TestimonialCard({ name, role, content }: TestimonialCardProps) {
+  const getInitials = (name: string) => {
+    return name
+        .split(' ')
+        .map(part => part[0])
+        .join('')
+        .toUpperCase();
+  };
+
   return (
-    <div className="p-6 bg-gray-800 rounded-xl">
-      <div className="flex items-center mb-4">
-        <img
-          src={image}
-          alt={name}
-          className="w-12 h-12 rounded-full object-cover mr-4"
-        />
-        <div>
-          <h4 className="font-semibold">{name}</h4>
-          <p className="text-gray-400 text-sm">{role}</p>
+      <div className="p-6 bg-gray-800 rounded-xl">
+        <div className="flex items-center mb-6">
+          <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-lg font-semibold mr-4">
+            {getInitials(name)}
+          </div>
+          <div>
+            <h4 className="font-semibold">{name}</h4>
+            <p className="text-gray-400 text-sm">{role}</p>
+          </div>
         </div>
+        <p className="text-gray-300">{content}</p>
       </div>
-      <p className="text-gray-300">{content}</p>
-    </div>
   );
 }
