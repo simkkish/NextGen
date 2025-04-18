@@ -11,6 +11,7 @@ interface ContactFormData {
     phone?: string;
 }
 
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 export function ContactForm() {
     const [formData, setFormData] = useState<ContactFormData>({
         name: '',
