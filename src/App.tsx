@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
     Code2,
     Palette,
@@ -16,8 +16,10 @@ import { ContactForm } from './components/ContactForm';
 import { CaseStudyCard } from './components/CaseStudyCard';
 import { PricingCard } from './components/PricingCard';
 import { Navbar } from './components/Navbar';
+import PolicyModal from "./components/PolicyModal.tsx";
 
 function App() {
+    const [showPolicy, setShowPolicy] = useState<"privacy" | "terms" | null>(null);
     return (
         <div className="min-h-screen bg-gray-900 text-white">
             <Toaster position="top-right" />
@@ -236,10 +238,27 @@ function App() {
                         <div className="text-gray-400 text-sm">
                             © 2025 NexGen DevOps. All rights reserved.
                         </div>
-                        <div className="flex space-x-6 mt-4 md:mt-0">
-                            <a href="#" className="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
-                            <a href="#" className="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                        <div className="space-x-4">
+                            <button
+                                onClick={() => setShowPolicy("privacy")}
+                                className="text-gray-400 hover:text-white text-sm"
+                            >
+                                Privacy Policy
+                            </button>
+
+                            <button
+                                onClick={() => setShowPolicy("terms")}
+                                className="text-gray-400 hover:text-white text-sm"
+                            >
+                                Terms of Service
+                            </button>
                         </div>
+
+                        <PolicyModal
+                            isOpen={!!showPolicy}
+                            selectedTab={showPolicy}
+                            onClose={() => setShowPolicy(null)}
+                        />
                     </div>
                 </div>
             </footer>
