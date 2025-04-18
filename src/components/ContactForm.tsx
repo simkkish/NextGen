@@ -31,8 +31,8 @@ export function ContactForm() {
 
         try {
             const result = await emailjs.send(
-                'service_p8qp2xs',
-                'template_bet06zd',
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 {
                     name: formData.name,
                     title: 'Contact Form Submission',
