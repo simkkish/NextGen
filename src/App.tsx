@@ -225,7 +225,7 @@ function App() {
                     <div className="max-w-2xl mx-auto">
                         <ContactForm />
                         <div className="mt-12 flex justify-center">
-                            <SocialLink icon={<Mail />} href="mailto:contact@nexgendevops.com" />
+                            <SocialLink icon={<Mail />} href="mailto:service.nexgendev@gmail.com" />
                         </div>
                     </div>
                 </div>
