@@ -7,39 +7,42 @@ import {
     Search,
     Mail,
 } from 'lucide-react';
-import { Toaster } from 'react-hot-toast';
-import { ServiceCard } from './components/ServiceCard';
-import { FeatureCard } from './components/FeatureCard';
-import { TestimonialCard } from './components/TestimonialCard';
-import { SocialLink } from './components/SocialLink';
-import { ContactForm } from './components/ContactForm';
-import { CaseStudyCard } from './components/CaseStudyCard';
-import { PricingCard } from './components/PricingCard';
-import { Navbar } from './components/Navbar';
+import {Toaster} from 'react-hot-toast';
+import {ServiceCard} from './components/ServiceCard';
+import {FeatureCard} from './components/FeatureCard';
+import {TestimonialCard} from './components/TestimonialCard';
+import {SocialLink} from './components/SocialLink';
+import {ContactForm} from './components/ContactForm';
+import {CaseStudyCard} from './components/CaseStudyCard';
+import {PricingCard} from './components/PricingCard';
+import {Navbar} from './components/Navbar';
 import PolicyModal from "./components/PolicyModal.tsx";
 
 function App() {
     const [showPolicy, setShowPolicy] = useState<"privacy" | "terms" | null>(null);
     return (
         <div className="min-h-screen bg-gray-900 text-white">
-            <Toaster position="top-right" />
-            <Navbar />
+            <Toaster position="top-right"/>
+            <Navbar/>
 
             {/* Hero Section */}
             <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20" />
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"/>
                 <div className="relative container mx-auto px-6 py-16 text-center">
                     <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
                         Crafting Digital Experiences That Matter
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                        We create stunning, responsive websites and web applications that help businesses thrive in the digital world.
+                        We create stunning, responsive websites and web applications that help businesses thrive in the
+                        digital world.
                     </p>
+                    <a href="#contact">
                     <button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg
             text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300
             transform hover:scale-105">
                         Start Your Project
                     </button>
+                    </a>
                 </div>
             </header>
 
@@ -48,8 +51,10 @@ function App() {
                 <div className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center mb-16">About Us</h2>
                     <p className="text-xl text-gray-300 text-center max-w-4xl mx-auto">
-                        We're a passionate team of web developers, designers, and digital strategists dedicated to creating
-                        exceptional online experiences. From custom websites to e-commerce solutions, we bring your vision to life.
+                        We're a passionate team of web developers, designers, and digital strategists dedicated to
+                        creating
+                        exceptional online experiences. From custom websites to e-commerce solutions, we bring your
+                        vision to life.
                     </p>
                 </div>
             </section>
@@ -60,27 +65,27 @@ function App() {
                     <h2 className="text-4xl font-bold text-center mb-16">Our Services</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         <ServiceCard
-                            icon={<Code2 className="w-12 h-12 text-blue-400" />}
+                            icon={<Code2 className="w-12 h-12 text-blue-400"/>}
                             title="Custom Web Development"
                             description="Tailored websites and web applications built with modern technologies and best practices."
                         />
                         <ServiceCard
-                            icon={<Palette className="w-12 h-12 text-purple-400" />}
+                            icon={<Palette className="w-12 h-12 text-purple-400"/>}
                             title="UI/UX Design"
                             description="Beautiful, intuitive designs that engage users and drive conversions."
                         />
                         <ServiceCard
-                            icon={<Smartphone className="w-12 h-12 text-green-400" />}
+                            icon={<Smartphone className="w-12 h-12 text-green-400"/>}
                             title="Responsive Development"
                             description="Mobile-first websites that work flawlessly across all devices and screens."
                         />
                         <ServiceCard
-                            icon={<ShoppingBag className="w-12 h-12 text-blue-400" />}
+                            icon={<ShoppingBag className="w-12 h-12 text-blue-400"/>}
                             title="E-commerce Solutions"
                             description="Custom online stores with secure payment processing and inventory management."
                         />
                         <ServiceCard
-                            icon={<Search className="w-12 h-12 text-purple-400" />}
+                            icon={<Search className="w-12 h-12 text-purple-400"/>}
                             title="SEO Optimization"
                             description="Search engine optimized websites that help you reach more customers."
                         />
@@ -223,9 +228,9 @@ function App() {
                 <div className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center mb-16">Contact Us</h2>
                     <div className="max-w-2xl mx-auto">
-                        <ContactForm />
+                        <ContactForm/>
                         <div className="mt-12 flex justify-center">
-                            <SocialLink icon={<Mail />} href="mailto:service.nexgendev@gmail.com" />
+                            <SocialLink icon={<Mail/>} href="mailto:service.nexgendev@gmail.com"/>
                         </div>
                     </div>
                 </div>
